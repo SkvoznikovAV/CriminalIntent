@@ -11,6 +11,10 @@ class CrimeListViewModel : ViewModel() {
             crime.title = "Crime #$i"
             crime.isSolved = i % 2 == 0
             crimes += crime
+
+            if (i==10 || i==20 ) {
+                crime.requiresPolice = true
+            }
         }
     }
 

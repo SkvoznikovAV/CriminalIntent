@@ -11,12 +11,20 @@
         android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="Crime Title"/>
     <TextView
         android:id="@+id/crime_date"
         android:textColor="@color/black"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Crime Date"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_police"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Связаться с полицией" />
 
 </LinearLayout>
