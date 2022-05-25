@@ -6,8 +6,9 @@
         <entry key="..\:/Users/skvoz/AndroidStudioProjects/CriminalIntent/app/src/main/res/layout/fragment_crime.xml" value="0.5" />
         <entry key="..\:/Users/skvoz/AndroidStudioProjects/CriminalIntent/app/src/main/res/layout/fragment_crime_list.xml" value="0.20208333333333334" />
         <entry key="..\:/Users/skvoz/AndroidStudioProjects/CriminalIntent/app/src/main/res/layout/list_item_crime.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/list_item_crime.xml" value="0.37604166666666666" />
-        <entry key="app/src/main/res/layout/list_item_important_crime.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/drawable/ic_baseline_grid_on_24.xml" value="0.2805" />
+        <entry key="app/src/main/res/layout/list_item_crime.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/list_item_important_crime.xml" value="0.5" />
       </map>
     </option>
   </component>

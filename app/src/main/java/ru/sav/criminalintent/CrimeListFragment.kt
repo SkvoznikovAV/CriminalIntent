@@ -1,16 +1,25 @@
 package ru.sav.criminalintent
 
+import android.annotation.SuppressLint
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 private const val TAG = "CrimeListFragment"
 
@@ -32,15 +41,27 @@ class CrimeListFragment: Fragment() {
 
         val titleTextView: TextView = itemView.findViewById(R.id.crime_title)
         val dateTextView: TextView = itemView.findViewById(R.id.crime_date)
+        val solvedImageView: ImageView = itemView.findViewById(R.id.crime_solved)
 
         init {
             itemView.setOnClickListener(this)
         }
 
+        @SuppressLint("SimpleDateFormat")
+        @RequiresApi(Build.VERSION_CODES.O)
         override fun bind(crime: Crime) {
             this.crime = crime
             titleTextView.text = this.crime.title
-            dateTextView.text = this.crime.date.toString()
+
+            val simpleDateFormat = SimpleDateFormat("dd-MMM-yyyy hh-mm-ss a")
+            val dateTime = simpleDateFormat.format(this.crime.date)
+
+            dateTextView.text = dateTime
+            solvedImageView.visibility = if (crime.isSolved){
+                View.VISIBLE
+            } else {
+                View.GONE
+            }
         }
 
         override fun onClick(p0: View?) {
